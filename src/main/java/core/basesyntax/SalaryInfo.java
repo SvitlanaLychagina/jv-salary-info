@@ -24,12 +24,8 @@ public class SalaryInfo {
                 LocalDate actualDate = LocalDate.parse(splitData[DATE_POSITION], FORMATTER);
                 if (!actualDate.isAfter(secondDate) && !actualDate.isBefore(firstDate)
                         && name.equals(splitData[NAME_POSITION])) {
-                    try {
-                        fullSalary += Integer.parseInt(splitData[HOUR_POSITION])
-                                * Integer.parseInt(splitData[INCOME_POSITION]);
-                    } catch (NumberFormatException e) {
-                        throw new NumberFormatException();
-                    }
+                    fullSalary += Integer.parseInt(splitData[HOUR_POSITION])
+                            * Integer.parseInt(splitData[INCOME_POSITION]);
                 }
             }
             report.append(System.lineSeparator()).append(name).append(" - ").append(fullSalary);
