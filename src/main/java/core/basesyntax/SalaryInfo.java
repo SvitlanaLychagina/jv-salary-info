@@ -32,7 +32,7 @@ public class SalaryInfo {
                     }
                 }
             }
-            report.append("\r\n").append(name).append(" - ").append(fullSalary);
+            report.append(System.lineSeparator()).append(name).append(" - ").append(fullSalary);
         }
         return report.toString();
     }
